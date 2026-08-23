@@ -1,0 +1,37 @@
+# Environment variables (NEVER commit secrets)
+.env
+.env.local
+.env.production
+web/.env.local
+web/data/
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# VAPI / local test artifacts
+recordings/
+call-logs/local/
+
+tsbuildinfo
+*.tsbuildinfo

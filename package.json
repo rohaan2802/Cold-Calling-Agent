@@ -1,0 +1,16 @@
+{
+  "name": "cold-calling-ai-voice-agent",
+  "version": "1.0.0",
+  "description": "Cold-calling AI voice agent for Likva9 technical assessment",
+  "private": true,
+  "scripts": {
+    "dev": "scripts\\run-dev.cmd",
+    "dev:web": "scripts\\run-dev.cmd",
+    "deploy:assistant": "node scripts/deploy-assistant.js",
+    "sync:web-env": "node scripts/sync-web-env.js",
+    "add:groq": "node scripts/add-groq-credential.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

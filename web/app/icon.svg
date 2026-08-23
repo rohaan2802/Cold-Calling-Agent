@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Vantora">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#152019"/>
+      <stop offset="1" stop-color="#0b100e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="18" y1="14" x2="48" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5dffb0"/>
+      <stop offset="1" stop-color="#2aa56f"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <rect x="3" y="3" width="58" height="58" rx="14" fill="none" stroke="#2a3630" stroke-width="2"/>
+  <!-- stylized V + voice waves -->
+  <path d="M18 18 L32 48 L46 18" fill="none" stroke="url(#accent)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 28c3.2 2.2 5.2 5.4 5.2 9.1S43.2 44 40 46.2" fill="none" stroke="#3ecf8e" stroke-width="2.4" stroke-linecap="round" opacity="0.95"/>
+  <path d="M45.5 24.5c4.6 3.2 7.5 7.8 7.5 12.9s-2.9 9.7-7.5 12.9" fill="none" stroke="#3ecf8e" stroke-width="2.2" stroke-linecap="round" opacity="0.55"/>
+</svg>

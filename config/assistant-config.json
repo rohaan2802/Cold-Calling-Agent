@@ -1,0 +1,51 @@
+{
+  "name": "Vantora Cold-Call Agent",
+  "firstMessage": "Hi there! This is Alex calling from Vantora. We help businesses automate repetitive workflows so teams can save hours every week. Do you have thirty seconds? I promise to keep it brief.",
+  "firstMessageMode": "assistant-speaks-first",
+  "endCallMessage": "Thanks for your time today. Have a great day!",
+  "endCallPhrases": ["goodbye", "please hang up", "remove me", "stop calling", "don't call again"],
+  "silenceTimeoutSeconds": 30,
+  "maxDurationSeconds": 300,
+  "backgroundSound": "off",
+  "model": {
+    "provider": "groq",
+    "model": "llama-3.3-70b-versatile",
+    "temperature": 0.5,
+    "maxTokens": 400
+  },
+  "voice": {
+    "provider": "vapi",
+    "voiceId": "Elliot",
+    "version": 2,
+    "language": "auto"
+  },
+  "transcriber": {
+    "provider": "deepgram",
+    "model": "nova-2",
+    "language": "multi"
+  },
+  "startSpeakingPlan": {
+    "waitSeconds": 0.4,
+    "smartEndpointingEnabled": true
+  },
+  "stopSpeakingPlan": {
+    "numWords": 2,
+    "voiceSeconds": 0.3,
+    "backoffSeconds": 1
+  },
+  "artifactPlan": {
+    "recordingEnabled": true,
+    "recordingFormat": "mp3",
+    "loggingEnabled": true,
+    "transcriptPlan": {
+      "enabled": true,
+      "assistantName": "Alex",
+      "userName": "Prospect"
+    }
+  },
+  "serverMessages": [
+    "end-of-call-report",
+    "status-update",
+    "hang"
+  ]
+}
