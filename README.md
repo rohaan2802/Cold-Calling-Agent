@@ -4,8 +4,9 @@
 
 | | |
 |---|---|
-| **Status** | ✅ Live |
+| **Status** | ✅ Live + source on GitHub |
 | **Live Demo** | https://web-rouge-xi-23.vercel.app |
+| **GitHub** | https://github.com/rohaan2802/Cold-Calling-Agent |
 | **Deadline** | 25 August 2026 |
 | **Brand / Agent** | **Vantora** · **Alex** |
 | **Built by** | Rohaan |
@@ -36,6 +37,8 @@ Official refs: [VAPI Pricing](https://docs.vapi.ai/pricing) · [VAPI Free Teleph
 
 Stays live indefinitely while the Vercel project + env keys stay active and VAPI still has credits.
 
+**Source:** https://github.com/rohaan2802/Cold-Calling-Agent (public)
+
 ---
 
 ## Table of Contents
@@ -58,7 +61,7 @@ Stays live indefinitely while the Vercel project + env keys stay active and VAPI
 16. [Troubleshooting](#16-troubleshooting)
 17. [Submission](#17-submission)
 18. [Changelog](#18-changelog)
-19. [GitHub push (how to)](#19-github-push-how-to)
+19. [GitHub (source)](#19-github-source)
 
 ---
 
@@ -536,7 +539,7 @@ For **Likva9 eval via Call Agent**, the core loop is done. Remaining gaps are ei
 | Outbound E2E on free VAPI number | Daily ~10-attempt cap (re-test after reset / import Twilio etc.) |
 | Mid-call live language switch | Intentionally locked; design is in this section |
 | Callback auto-dial / Excel / dashboard | Product roadmap — agent can *agree* verbally but no scheduler yet |
-| GitHub remote | Local folder has `.gitignore` but **Git is not installed** on this machine yet (see end of README / ask Rohaan) |
+| GitHub remote | ✅ Done — https://github.com/rohaan2802/Cold-Calling-Agent |
 
 ### Efficiency techniques (latency · cost · reliability)
 
@@ -728,6 +731,7 @@ Client / lead intake (form, Excel upload, CRM, WhatsApp)
 | | |
 |---|---|
 | **Live** | https://web-rouge-xi-23.vercel.app |
+| **GitHub** | https://github.com/rohaan2802/Cold-Calling-Agent |
 | **Platforms** | [VAPI](https://vapi.ai) · [Groq](https://groq.com) · [Deepgram](https://deepgram.com) · [Next.js](https://nextjs.org) · [Vercel](https://vercel.com) |
 | **Email** | contact@likva9.tech |
 | **Deadline** | 25 August 2026 |
@@ -749,22 +753,28 @@ Suggested note: Call Agent for eval · Call History for recordings · README cov
 | 2026-08-21 | README: callbacks, Excel upload, discard, dashboard, client intake, hands-off automation; icon path documented |
 | 2026-08-21+ | Language lock before/during call; client-managed idle; soft barge-in; voice speed 0.8 |
 | 2026-08-23 | Hangup: Urdu “call cut” + Allah hafiz → hard cut ~2s; README §5/§7/§13 efficiency + completeness |
+| 2026-08-23 | Public GitHub: https://github.com/rohaan2802/Cold-Calling-Agent |
 
 ---
 
-## 19. GitHub push (how to)
+## 19. GitHub (source)
 
-This folder is **not** a git repo yet, and **Git is not installed** on the current Windows PATH.
+| | |
+|---|---|
+| **Repo** | https://github.com/rohaan2802/Cold-Calling-Agent |
+| **Visibility** | Public |
+| **Branch** | `main` |
+| **Secrets** | `.env` / real keys are **not** in the repo (see `.gitignore` + `.env.example`) |
 
-**Yes — I can create a GitHub repo and push this project**, once you:
+Clone:
 
-1. Install [Git for Windows](https://git-scm.com/download/win) (restart Cursor after install)  
-2. Have a GitHub account + either `gh` CLI logged in, or a Personal Access Token  
-3. Tell me the repo name (e.g. `cold-calling-ai-voice-agent`) and whether it should be **public** or **private**
-
-Then I will: `git init` → commit (`.env` stays out via `.gitignore`) → `gh repo create` → `git push`.
-
-**Do not** commit `.env` / real API keys. `.gitignore` already blocks them.
+```bash
+git clone https://github.com/rohaan2802/Cold-Calling-Agent.git
+cd Cold-Calling-Agent
+cp .env.example .env   # fill keys
+npm run sync:web-env
+cd web && npm install && npm run dev
+```
 
 ---
 
